@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+.encode-font {
+  font-family: "Encode Sans Expanded", sans-serif;
+}
+
+.__resume a {
+  height: 30px;
+  width: 70px;
+  background-color: #4db4ff;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 550;
+}
+
+.__resume a:hover {
+  background-color: #808080;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.__moon-star {
+  height: 20px;
+}
+.__moon-star:hover {
+  cursor: pointer;
+  color: gray;
+}
+hr {
+  width: 100%;
+  margin: 10px 0px;
+}
+.__mainHero h2{
+  color: #4db4ff
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+/* DEMO-SPECIFIC STYLES */
+
+
+.typewriter p {
+    max-width: 791px;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .10em; /* Adjust as needed */
+    animation: 
+      typing 10.275s steps(93, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
