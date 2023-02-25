@@ -36,8 +36,8 @@ hr {
   width: 100%;
   margin: 10px 0px;
 }
-.__mainHero h2{
-  color: #4db4ff
+.__mainHero h2 {
+  color: #4db4ff;
 }
 @media (prefers-color-scheme: dark) {
   html {
@@ -45,30 +45,37 @@ hr {
   }
 }
 
-/* DEMO-SPECIFIC STYLES */
-
+/* type writer main hero style */
 
 .typewriter p {
-    max-width: 791px;
-    font-family: monospace;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .10em; /* Adjust as needed */
-    animation: 
-      typing 10.275s steps(93, end),
-      blink-caret .5s step-end infinite;
+  max-width: 435px;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.1em; /* Adjust as needed */
+  animation: typing 10.275s steps(93, end), blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
   }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+  to {
+    width: 100%;
   }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
   }
+  50% {
+    border-color: orange;
+  }
+}
+
