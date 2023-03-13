@@ -2,7 +2,10 @@ import React from "react";
 import { BsMoonStarsFill } from "react-icons/bs";
 import { useDarkMode } from "./Layout";
 export default function Navbar() {
-    const [isDark, toggleTheme] = useDarkMode();
+    const [,toggleTheme] = useDarkMode();
+    const handleClick = () => {
+        toggleTheme();
+      };
     return (
     <nav className="position-fixed top-0 left-0 right-0 z-999 mb-3 p-0 flex flex-col">
       <div className="flex flex-auto flex-row items-center w-full h-12">
@@ -16,7 +19,7 @@ export default function Navbar() {
         <ul className="inline-flex justify-center">
           <li className="ml-auto mr-10 mt-4 position-relative">
             <BsMoonStarsFill
-              onClick={toggleTheme}
+              onClick={handleClick}
               className="__moon-star __text"
             />
           </li>

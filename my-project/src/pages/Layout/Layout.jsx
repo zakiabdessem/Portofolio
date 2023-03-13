@@ -4,18 +4,18 @@ import Header from "../Layout/Header";
 import Navbar from "../Layout/Navbar";
 
 export const useDarkMode = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
-  const toggleTheme = () => setIsDark((prevState) => !prevState);
+  const toggleTheme = () => setIsDark(!isDark);
 
   return [isDark, toggleTheme];
 };
 
 export default function Layout({ children }) {
-  const [isDark, toggleTheme] = useDarkMode();
+  const [isDark] = useDarkMode();
 
   const backgroundColor = isDark ? "#17182c" : "#fff";
-  const textColor = isDark ? "white" : "black";
+  const textColor = isDark ? "white" : "#000000";
 
   return (
     <>
